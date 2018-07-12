@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2018-01-20T17:24Z
+ * Date: 2017-01-20T17:24Z
  */
 ( function( global, factory ) {
 
@@ -41,7 +41,7 @@
 
 // Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
 // throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
-// arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
+// arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2017), strict mode should be common
 // enough that all such attempts are guarded in a try block.
 "use strict";
 
@@ -505,7 +505,7 @@ var Sizzle =
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2016-08-08
+ * Date: 2017-08-08
  */
 (function( window ) {
 
