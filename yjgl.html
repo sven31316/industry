@@ -157,7 +157,7 @@
                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
                     <span class="tiaoshijian">
                     结束时间：
-                    <input type="text" class="shi" id="xuanshi2" readonly value="2017-08-12">
+                    <input type="text" class="shi" id="xuanshi2" readonly value="2017-08-31">
                     <i class="glyphicon glyphicon-calendar fa fa-calendar" style="left:86px;"></i></span>
                   <span>
                   预警级别
@@ -417,9 +417,17 @@
 
     /* 第二个图 */
     var myChart2 = echarts.init(document.getElementById('echarts_yjgl_two'));
+    var date =  ['1日', '2日', '3日', '4日', '5日', '6日', '7日', '8日', '9日', '10日', '11日', '12日','13日','14日','15日','16日','17日','18日','19日','20日',
+    '21日','22日','23日','24日','25日','26日','27日','28日','29日','30日','31日'];
+    var randomData = [];
+
+    for (var i = 0; i < 31; i++) {
+        // date.push((i + 1) + ':00');
+        randomData.push(Math.floor(Math.random() * 4));
+    }
     option2 = {
         title: {
-            text: '  设备报警时间分析：2017年08日01日—2017年08日12日',
+            text: '  设备报警时间分析：2017年08日01日—2017年08日31日',
             left: 'center',
             textStyle: {
                 color: '#fff',
@@ -445,7 +453,7 @@
                     color: 'rgba(43,46,56,0.8)'
                 }
             },
-            data: ['1日', '2日', '3日', '4日', '5日', '6日', '7日', '8日', '9日', '10日', '11日', '12日']
+            data:date
         },
         yAxis: {
             splitLine: {
@@ -467,7 +475,8 @@
             {
                 name: '设备报警',
                 type: 'line',
-                data: [1, 0, 3, 0, 0, 3, 0, 0, 0, 0, 2, 0],
+                // data: [1, 0, 3, 0, 0, 3, 0, 0, 0, 0, 2, 0],
+                data:randomData,
                 symbol: 'circle',
                 symbolSize: 10,
                 lineStyle: {normal: {color: '#ff6b6b'}}
@@ -475,14 +484,34 @@
     };
     myChart2.setOption(option2);
 
-    myChart1.resize();
-    myChart2.resize();
-    window.addEventListener("resize", function () {
+
+    setInterval(function(){
+        randomData.push(Math.floor(Math.random()*4));
+        randomData.shift();
+        var ite=date.shift();
+        date.unshift(ite);
+        date.push(ite)
+        console.log(date.length)
+        date.shift()
+        console.log(date)
+        myChart2.setOption({
+            xAxis: {
+                data: date
+            },
+            series: [{
+                data: randomData
+            }]
+        });
         myChart1.resize();
         myChart2.resize();
+        window.addEventListener("resize", function () {
+            myChart1.resize();
+            myChart2.resize();
 
 
-    });
+        });
+    }, 2000)
+
 
 
 </script>
