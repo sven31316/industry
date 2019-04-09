@@ -124,7 +124,7 @@ $(".shoudanxuan").click(function(){
 // 首页单选框点击效果
 
 
-// 运行监测点击效果
+// 车间能耗监测点击效果
 $(".yxjc_info li").click(function(){
 if ($(this).index() < 4) {
 if(!$(this).hasClass("xuanli")){
@@ -133,13 +133,13 @@ if($(this).hasClass("kong")){
  $(".yxjc").find("img").attr("src","vince/images/yxjc.png")}
 if($(this).hasClass("qi")){
  $(".yxjc").find("img").attr("src","vince/images/yxjc2.png")}};});
-// 运行监测点击效果
+// 车间能耗监测点击效果
 
 
-// 实时监测底部的几个开关
+// 运行能耗监测底部的几个开关
 var suikuan = 100/$(".ssjc_left_bottom").find('.ssjc_lbshare').length+"%";
 $(".ssjc_left_bottom").find('.ssjc_lbshare').css({"width":suikuan})
-// 实时监测底部的几个开关的宽度
+// 运行能耗监测底部的几个开关的宽度
 
 
 // 设备入库表格内选择框的设置
