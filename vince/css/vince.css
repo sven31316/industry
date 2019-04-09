@@ -55,7 +55,7 @@ li{list-style: none}
 .login_botton{margin-top: 19px;}
 .login_botton input{width:100px;height: 35px;line-height: 33px;background: #ff7e00 url(../images/icon_06.png)no-repeat 5px 5px;border:1px solid #d96627;border-radius: 5px;overflow: hidden;color: #fff;padding-left: 30px;}
 
-/* 运行监测 */
+/* 车间能耗监测 */
 .yxjc img{max-width: 100%;display: block;margin: 10px auto;max-height: 100%;}
 .yxjc{position: relative;height: 100%;width: 100%;}
 .yxjc_info{top:20px;left: 20px;width: 140px;float: left;height: 100%;}
@@ -156,7 +156,7 @@ li{list-style: none}
 @media (max-width: 992px) {.xg_right_one_left{margin-bottom:10px;}.xg_right .nei_left{margin-left: 0}.xm-top{margin-top: 10px}
 .xyxgpj_center .nei{margin: 0 ;}.charqie{border-top:10px solid #000;}.echart_qu{border-top:10px solid #000;}}
 .xyxgpj_baifen{position: absolute;height: 100%;width: 70%;background:#89b329;z-index: 1;}
-/* 实时监测 */
+/* 运行能耗监测 */
 .ssjc_left{background: #21242e;}
 .ssjc_right .nei{background: #21242e;margin-left: 10px;}
 .ssjc_title{border-bottom:1px solid #43454e;line-height: 40px;}
@@ -289,7 +289,7 @@ li{list-style: none}
 .fhxyfx_fan{float: right;height: 30px;width: 30px;display: block;background: url(../images/icon_44.png);background-size:100% 100%;cursor: pointer;margin-right: 15px;}
 
 
-/* 预警管理 */
+/* 异常排查 */
 .ssjc_ru_title .left_ten{padding-left: 10px;}
 .ssjc_ru_title .right_ten{padding: 0 10px;}
 .echarts_yjgl_one{height: 270px;margin-top: 10PX;}
