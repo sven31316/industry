@@ -99,7 +99,7 @@
                 </li>
                 <li>
                     <a href="yjgl.html">
-                        <i class="fa fa-bell"></i> <span>预警管理</span>
+                        <i class="fa fa-bell"></i> <span>异常排查</span>
                     </a>
                 </li>
                 <li class="treeview">
@@ -118,16 +118,7 @@
                         <li><a href="sbcx.html"><i class="fa fa-bookmark"></i> 设备查询</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="kzcl.html">
-                        <i class="fa fa-magnet"></i> <span>控制策略</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="xtjc.html">
-                        <i class="fa fa-map"></i> <span>系统集成</span>
-                    </a>
-                </li>
+
             </ul>
         </section>
     </aside>
@@ -145,8 +136,7 @@
                         <div class="ssjc_title">
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;选择能耗对象<span class="ssjc_title_right">
           				<span class="ssjc_littlesel check" onclick='quvalue()'>项目</span>
-          				<span class="ssjc_littlesel">分项</span>
-          				<span class="ssjc_littlesel">支路</span>
+
           			</span>
                             <div class="clear"></div>
                             </p>
@@ -159,160 +149,23 @@
                             <div class="tree well tree_one">
                                 <ul class="none_margin">
                                     <li>
-                                        <span><i class="icon-folder-open"></i> <input type="checkbox"
-                                                                                      class="tree_check"> <em> 汽车制造</em></span>
+                                        <span><i class="icon-folder-open"></i> <em>车间分类</em></span>
                                         <ul>
-                                            <li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>车厢驾驶室</em></span>
-                                                <ul class="spe_margin">
-                                                    <li style="display: none;"><span><i
-                                                            class="icon-plus-sign"></i><input type="checkbox"
-                                                                                              class="tree_check"> <em>高区</em></span>
-                                                        <ul class="spe_margin">
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"
-                                                                                                    name="diqu"
-                                                                                                    checked="checked"
-                                                                                                    value="111"> <em>锻造</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"
-                                                                                                    name="diqu"
-                                                                                                    checked="checked"
-                                                                                                    value="222"> <em>热处理</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"
-                                                                                                    name="diqu"
-                                                                                                    checked="checked"
-                                                                                                    value="333"> <em>熔化</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"
-                                                                                                    name="diqu"
-                                                                                                    checked="checked"
-                                                                                                    value="444"> <em>其他</em></span>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li style="display: none;"><span><i
-                                                            class="icon-plus-sign"></i><input type="checkbox"
-                                                                                              class="tree_check"> <em>低区</em></span>
-                                                        <ul class="spe_margin">
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"> <em>浇筑</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"> <em>油漆</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"> <em>压铸</em></span>
-                                                            </li>
-                                                            <li style="display: none;"><span><input type="checkbox"
-                                                                                                    class="tree_check"> <em>其他</em></span>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                            <li><span><input type="checkbox"
+                                                             class="tree_check" checked="checked"> <em>冲压车间</em></span>
+
                                             </li>
-                                            <li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>变速器布置</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
+                                            <li><span><input type="checkbox"
+                                                             class="tree_check"> <em>焊接车间</em></span>
+
+                                            </li> <li><span><input type="checkbox"
+                                                             class="tree_check"> <em>涂装车间</em></span>
+
+                                            </li><li><span><input type="checkbox"
+                                                             class="tree_check"> <em>总装车间</em></span>
+
                                             </li>
-                                            <li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>传动轴布置</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
-                                            </li> <li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>承载式车底板</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
-                                            </li><li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>制动系布置</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
-                                            </li><li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>前后悬架布置</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
-                                            </li><li><span><i class="icon-plus-sign"></i><input type="checkbox"
-                                                                                           class="tree_check"> <em>空调装置布置</em></span>
-                                                <ul>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">车身装配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span><input type="checkbox" class="tree_check">内部装饰</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">变速箱转配</span>
-                                                    </li>
-                                                    <li style="display: none;">
-                                                        <span> <input type="checkbox" class="tree_check">其他</span>
-                                                    </li>
-                                                </ul>
-                                            </li>
+
                                         </ul>
                                     </li>
 
@@ -321,24 +174,7 @@
                             <!-- 树形导航 -->
 
                             <!-- 树形导航二 -->
-                            <div class="tree well tree_two">
-                                <ul class="none_margin">
-                                    <li>
-                                        <span><i class="icon-folder-open"></i> <input type="checkbox" class="tree_check"
-                                                                                      checked="checked"> <em> 分项</em></span>
-                                        <ul>
-                                            <li><span><input type="checkbox" class="tree_check"> <em>空气动力</em></span>
-                                            </li>
-                                            <li><span><input type="checkbox" class="tree_check"> <em>电力</em></span>
-                                            </li>
-                                            <li><span><input type="checkbox" class="tree_check"> <em>动力</em></span></li>
-                                            <li><span><input type="checkbox" class="tree_check"> <em>其他</em></span></li>
-                                        </ul>
-                                    </li>
 
-                                </ul>
-                            </div>
-                            <!-- 树形导航 -->
                             <!-- 树形导航三 -->
                             <div class="tree well tree_three">
                                 <ul class="none_margin">
@@ -548,7 +384,7 @@
         <div class="pull-right hidden-xs">
             <b></b>
         </div>
-        <strong>Copyright &copy; 2014-2019 powersolver.com All Rights Reserved powered by 互联网+小组</strong>
+        <strong>Copyright &copy; 2014-2019 powersolver.com All Rights Reserved powered by +</strong>
     </footer>
     <div class="control-sidebar-bg"></div>
 </div>
@@ -580,16 +416,16 @@
 
     /* 第一个图 */
     var myChart1 = echarts.init(document.getElementById('echarts_ssjc_one'));
-    var date = ['1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'];
+    var date = ['1日', '2日', '3日', '4日', '5日', '6日', '7日', '8日', '9日', '10日', '11日', '12日', '13日', '14日', '15日', '16日', '17日', '18日', '19日', '20日', '21日', '22日', '23日', '24日','25日', '26日', '27日', '28日', '29日', '30日'];
     var randomData = [];
 
-    for (var i = 0; i < 24; i++) {
+    for (var i = 0; i < 30; i++) {
         // date.push((i + 1) + ':00');
         randomData.push(Math.floor(Math.random() * 100));
     }
     option1 = {
         title: {
-            text: '2017年1月1日0:00—2017年1月1日24:00项目用电量历史分析',
+            text: '2017年1月1日0:00—2017年1月30日24:00项目用电量历史分析',
             left: 'center',
             textStyle: {
                 color: '#fff',

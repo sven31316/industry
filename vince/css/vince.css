@@ -289,7 +289,7 @@ li{list-style: none}
 .fhxyfx_fan{float: right;height: 30px;width: 30px;display: block;background: url(../images/icon_44.png);background-size:100% 100%;cursor: pointer;margin-right: 15px;}
 
 
-/* 预警管理 */
+/* 异常排查 */
 .ssjc_ru_title .left_ten{padding-left: 10px;}
 .ssjc_ru_title .right_ten{padding: 0 10px;}
 .echarts_yjgl_one{height: 270px;margin-top: 10PX;}
