@@ -396,8 +396,8 @@ $(".requtwo").css({"display":"block"})
 },function(){
 $(".requtwo").css({"display":"none"})})},
 function(){$(".requtwo").css({"display":"none"})})}  
-$("#hotone").click(function(){top.location.href="ssjc.html";})
-$("#hottwo").click(function(){top.location.href="ssjc.html";})
+$("#hotone").click(function(){top.location.href="yxnhjc.html";})
+$("#hottwo").click(function(){top.location.href="yxnhjc.html";})
 
 function adjustjian() {   
   pageHeith=$(".rezone").height();
