@@ -162,7 +162,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        是打发第三方
+                                        <div style="height: 400px;width: auto" id="echarts_ssjc_one">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -287,6 +288,83 @@
 
 <script src="vince/js/echarts.min.js"></script>
 <script type="text/javascript">
+
+    /* 第一个图 */
+    var myChartshow = echarts.init(document.getElementById('echarts_ssjc_one'));
+    var date = ['1日', '2日', '3日', '4日', '5日', '6日', '7日', '8日', '9日', '10日', '11日', '12日', '13日', '14日', '15日', '16日', '17日', '18日', '19日', '20日', '21日', '22日', '23日', '24日','25日', '26日', '27日', '28日', '29日', '30日'];
+    var randomData = [];
+
+    for (var i = 0; i < 30; i++) {
+        // date.push((i + 1) + ':00');
+        randomData.push(Math.floor(Math.random() * 100));
+    }
+    optionshow = {
+        title: {
+            text: '2017年1月1日0:00—2017年1月30日24:00项目用电量历史分析',
+            left: 'center',
+            textStyle: {
+                color: '#fff',
+                fontSize: 14,
+                fontWeight: 'normal'
+            },
+            padding: 13
+        },
+
+        legend: {
+            bottom: '2%',
+            textStyle: {
+                color: '#fff',
+            },
+            data: ['耗电量']
+        },
+
+        textStyle: {color: '#fff'},
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b} 耗能量: {c}'
+        },
+        xAxis: {
+            type: 'category',
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: 'rgba(43,46,56,0.8)'
+                }
+            },
+            data: date,
+            // data: ['1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']
+        },
+        yAxis: {
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: 'rgba(43,46,56,0.8)'
+                }
+            },
+            scale: true
+        },
+        grid: {
+            top: '13%',
+            left: '3%',
+            right: '4%',
+            bottom: '15%',
+            containLabel: true
+        },
+        series: [
+            {
+                name: '项目',
+                type: 'line',
+                data: randomData,
+                symbol: 'circle',
+                symbolSize: 10,
+                lineStyle: {normal: {color: '#ff6b6b'}}
+            }]
+    };
+
+
+myChartshow.setOption(optionshow);
+
+
     var myChart1 = echarts.init(document.getElementById('echarts_xyxgpj_one'));
 
 
