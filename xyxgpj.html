@@ -90,7 +90,7 @@
                     <a href="#">
                         <i class="fa fa-sliders"></i>
                         <span>能耗评价</span>
-                        <span class="pull-right-container">
+
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
@@ -111,7 +111,7 @@
                     <a href="#">
                         <i class="fa fa-gears"></i>
                         <span>设备管理</span>
-                        <span class="pull-right-container">
+
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
@@ -141,15 +141,14 @@
                         <h4>响应方案<span>管理</span></h4>
                         <div class="row">
                             <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p class="xj_left_chioce">
-                                方案一：2017年9月削峰方案</p></a></div>
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>方案二：2017年8月削峰方案</p></a>
+                                冲压车间</p></a></div>
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>焊接车间</p></a>
                             </div>
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>方案三：2017年5-7月削峰方案</p></a>
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>涂装车间</p></a>
                             </div>
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>方案四：2017年4月削峰方案</p></a>
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>总装车间</p></a>
                             </div>
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12"><a href=""><p>方案五：2017年1-3月削峰方案</p></a>
-                            </div>
+
                         </div>
                     </div>
 
@@ -167,9 +166,8 @@
                                         </div>
 
                                         <div class="xyxgpj_right">
-                                            <p>当前调节目标：4098KW &nbsp;&nbsp;&nbsp;&nbsp; 已完成：3228KW &nbsp;&nbsp;&nbsp;&nbsp;
-                                                当前负荷:360KW &nbsp;&nbsp;&nbsp;&nbsp;当前运行方案：2017年9月削峰方案 &nbsp;&nbsp;&nbsp;&nbsp;
-                                                夏季空调调频策略 &nbsp;&nbsp; 照明控制策略 &nbsp;&nbsp; 策略03</p>
+                                            <p>当前消耗能耗：4098KW &nbsp;&nbsp;&nbsp;&nbsp; 已生产车辆能耗：3228KW &nbsp;&nbsp;&nbsp;&nbsp;
+                                                单车能耗:360KW</p>
                                         </div>
                                         <div class="clear"></div>
                                     </div>
@@ -178,6 +176,7 @@
 
 
                             <div class="xyxgpj_echarts">
+                                <div class="echarts_xyxgpj_three" id="echartszhuangzhuagntu"></div>
                                 <div class="echarts_xyxgpj_three" id="echarts_xyxgpj_three">
                                 </div>
                             </div>
@@ -189,7 +188,8 @@
                                 <div class="clear"></div>
                             </div>
 
-                            <li><span class="xyxgpj_li_1">01夏季熔炉房控温策略</span><span class="xyxgpj_li_2">调节开始时间：11：00</span><span
+                            <li><span class="xyxgpj_li_1">01夏季熔炉房控温策略</span><span
+                                    class="xyxgpj_li_2">调节开始时间：11：00</span><span
                                     class="xyxgpj_li_3">调节结束时间:18：00</span><span
                                     class="xyxgpj_li_4">调节目标:2598KW</span><span class="xyxgpj_li_5">实际调节:2017KW</span>
                             </li>
@@ -247,7 +247,7 @@
         <div class="pull-right hidden-xs">
             <b></b>
         </div>
-        <strong>Copyright &copy; 2014-2019 powersolver.com All Rights Reserved powered by     +</strong>
+        <strong>Copyright &copy; 2014-2019 powersolver.com All Rights Reserved powered by +</strong>
     </footer>
     <div class="control-sidebar-bg"></div>
 </div>
@@ -276,7 +276,7 @@
     var myChart1 = echarts.init(document.getElementById('echarts_xyxgpj_one'));
     option1 = {
         title: {
-            text: '负荷完成度',
+            text: '目标制造车辆',
             textStyle: {
                 color: '#fff',
                 fontSize: 14,
@@ -285,7 +285,7 @@
             padding: 10
         },
         series: [{
-            name: '负荷完成度',
+            name: '单车能耗',
             type: 'pie',
             radius: ['35%', '70%'],
             center: ['50%', '50%'],
@@ -316,6 +316,120 @@
         }]
     };
     myChart1.setOption(option1);
+
+
+    /*echart 柱状图*/
+    const echartszhuzhuagntu = echarts.init(document.getElementById('echartszhuangzhuagntu'));
+
+    const app = {};
+    optionzhu = null;
+    optionzhu = {
+        title: {
+            text: '单车能耗周对比',
+            textStyle: {
+                color: '#fff',
+                fontSize: 14,
+                fontWeight: 'normal'
+            },
+            padding: 10
+        },
+        textStyle: {color: '#fff'},
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['A类车', 'B类车'],
+            textStyle:{color:'#fff'}
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: 'category',
+                data: ['1周', '2周', '3周', '4周', '5周', '6周', '7周', '8周', '9周', '10周']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: 'A类车',
+                type: 'bar',
+                data: [132.0, 144.9, 137.0, 123.2, 125.6, 176.7, 135.6, 162.2, 132.6, 120.0],
+                markPoint: {
+                    data: [
+                        {type: 'max', name: '最大值'},
+                        {type: 'min', name: '最小值'}
+                    ]
+                },
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }, label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        },
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+            },
+            {
+                name: 'B类车',
+                type: 'bar',
+                data: [122.6, 135.9, 129.0, 126.4, 128.7, 130.7, 175.6, 142.2, 148.7, 118.8],
+                markPoint: {
+                    data: [
+                        {name: '年最高', value: 182.2, xAxis: 7, yAxis: 183},
+                        {name: '年最低', value: 2.3, xAxis: 11, yAxis: 3}
+                    ]
+                },
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }, label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        },
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+            }
+        ]
+    };
+    ;
+    if (optionzhu && typeof optionzhu === "object") {
+        echartszhuzhuagntu.setOption(optionzhu, true);
+    }
+
 
     /* 第二个图 */
     var myChart2 = echarts.init(document.getElementById('echarts_xyxgpj_two'));
@@ -384,7 +498,7 @@
             orient: 'horizontal',
             right: '3%',
             top: '3%',
-            data: ['基线负荷', '实际负荷'],
+            data: ['去年该季度能耗', '今年该季度能耗'],
             textStyle: {color: '#fff'}
         },
 
@@ -418,7 +532,7 @@
         },
         series: [
             {
-                name: '基线负荷',
+                name: '去年该季度能耗',
                 type: 'line',
                 data: [55, 58, 56, 70, 150, 250, 210, 290, 310, 300, 320, 400, 410, 500, 480, 450, 300, 320, 300, 390, 410, 290, 150, 60],
                 markPoint: {
@@ -459,7 +573,7 @@
                 lineStyle: {normal: {color: '#ff6b6b'}}
             },
             {
-                name: '实际负荷',
+                name: '今年该季度能耗',
                 type: 'line',
                 data: [45, 61, 50, 75, 160, 240, 220, 290, 320, 305, 240, 320, 330, 380, 360, 400, 250, 310, 305, 381, 402, 293, 145, 61],
                 symbol: 'circle',
