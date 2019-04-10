@@ -228,9 +228,7 @@
                             </div>
                         </div>
                         <div class="echarts_two">
-                            <p>
-                                实时能耗评价
-                            </p>
+
 
                             <div class="echarts_xyxgpj_two" id="echarts_xyxgpj_two"></div>
 
@@ -384,8 +382,19 @@
 
 
     /* 第二个图 */
+    /* 第三个图 */
     var myChart2 = echarts.init(document.getElementById('echarts_xyxgpj_two'));
     option2 = {
+        title: {
+            text: '  能耗评价情况分析',
+            left: 'left',
+            textStyle: {
+                color: '#fff',
+                fontSize: 13,
+                fontWeight: 'normal'
+            },
+            padding: 13
+        },
         textStyle: {color: '#fff'},
         tooltip: {
             trigger: 'item',
@@ -395,7 +404,7 @@
             orient: 'horizontal',
             right: '3%',
             top: '3%',
-            data: ['基线负荷', '实际负荷'],
+            data: ['去年该季度能耗', '今年该季度能耗'],
             textStyle: {color: '#fff'}
         },
 
@@ -429,7 +438,7 @@
         },
         series: [
             {
-                name: '基线负荷',
+                name: '去年该季度能耗',
                 type: 'line',
                 data: [55, 58, 56, 70, 150, 250, 210, 290, 310, 300, 320, 400, 410, 500, 480, 450, 300, 320, 300, 390, 410, 290, 150, 60],
                 markPoint: {
@@ -470,7 +479,7 @@
                 lineStyle: {normal: {color: '#ff6b6b'}}
             },
             {
-                name: '实际负荷',
+                name: '今年该季度能耗',
                 type: 'line',
                 data: [45, 61, 50, 75, 160, 240, 220, 290, 320, 305, 240, 320, 330, 380, 360, 400, 250, 310, 305, 381, 402, 293, 145, 61],
                 symbol: 'circle',

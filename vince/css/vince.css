@@ -263,7 +263,7 @@ li{list-style: none}
 .xyfagl_one_left_left{float: left;width: 50%;min-height: 280px;}
 .xyfagl_one_left_left p{color: #fff;font-size: 14px;color: #fff;}
 .xyfagl_one_left_left p span{width: 108px;display: inline-block;text-align: justify;text-justify:distribute-all-lines;text-align-last:justify; padding-right: 5px;}
-.xyfagl_one_left_right{height: 280px;width:50%;float: left;}
+/*.xyfagl_one_left_right{height: 280px;width:50%;float: left;}*/
 .echarts_one{height: 100%;width:90%;}
 .xyfagl_one_right{min-height: 320px;}
 .xyfagl_one_right p{color: #fff;font-size: 14px;padding-top: 9px;padding-left: 20px;}
